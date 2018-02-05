@@ -12,7 +12,7 @@ RUN wget -q http://apache.claz.org/maven/maven-3/3.5.2/binaries/apache-maven-3.5
 
 ENV PATH=${PATH}:/bin/apache-maven-3.5.2/bin
 
-RUN wget -q https://archive.apache.org/dist/kafka/"$KAFKA_VERSION"/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz - /tmp/
+RUN wget -q https://archive.apache.org/dist/kafka/"$KAFKA_VERSION"/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz -P /tmp/
 RUN tar xfz /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz -C /opt
 RUN rm /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz
 
